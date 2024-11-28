@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.enp.powerfithub.api.dto.WorkoutRequest;
 import com.enp.powerfithub.api.dto.WorkoutResponse;
+import com.enp.powerfithub.api.service.WorkoutService;
 
 @RestController
 @RequestMapping("/api/workouts")
@@ -25,7 +26,7 @@ public class WorkoutController {
     }
 
     @PostMapping
-    public ResponseEntity<WorkoutResponse> createWorkout(@Valid @RequestBody WorkoutRequest request) {
+    public ResponseEntity<WorkoutResponse> createWorkout(@RequestBody WorkoutRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(workoutService.createWorkout(request));
     }
 
