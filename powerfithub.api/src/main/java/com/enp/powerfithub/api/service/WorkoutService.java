@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.enp.powerfithub.api.dto.WorkoutRequest;
 import com.enp.powerfithub.api.dto.WorkoutResponse;
+import com.enp.powerfithub.api.exception.ResourceNotFoundException;
 import com.enp.powerfithub.api.model.Workout;
 import com.enp.powerfithub.api.repository.WorkoutRepository;
 
